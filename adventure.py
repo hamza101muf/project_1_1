@@ -2,16 +2,59 @@
 
 # init turtle + screen
 import time
+import turtle as trtl
 import random as rand
-from animations import *
+#import animations as anim
+
+
+screen_h = 2100
+screen_w = 2000
+wn = trtl.Screen()
+wn.setup(width=screen_w, height=screen_h)
+
+#----- def screen size vars
+screen_h = 2100
+screen_w = 2000
+
+#----- init screen
+wn = trtl.Screen()
+wn.setup(width=screen_w, height=screen_h)
+
+# img init for 0th section
+def chc_0():
+    wn.bgpic("/Volumes/Classes/High/ITAMS/TCalabresi/Period2/Group/gavin, hamza, rayyan/project_1_1/cac_jack_solo.gif") 
+
+# img init for 1st section
+def chc_1():
+    wn.bgpic("/Volumes/Classes/High/ITAMS/TCalabresi/Period2/Group/gavin, hamza, rayyan/project_1_1/cac_jack_ghost.gif")
+
+# img init for 2nd section
+def chc_2():
+    wn.bgpic("/Volumes/Classes/High/ITAMS/TCalabresi/Period2/Group/gavin, hamza, rayyan/project_1_1/jack_landscape_left.gif")
+
+# SKIP #3
+
+# img init for 4th section
+def chc_4():
+    wn.bgpic("/Volumes/Classes/High/ITAMS/TCalabresi/Period2/Group/gavin, hamza, rayyan/project_1_1/trtl_grv.gif")
+
+def spdr():
+    wn.bgpic("/Volumes/Classes/High/ITAMS/TCalabresi/Period2/Group/gavin, hamza, rayyan/project_1_1/spdr.gif")
+
+def cave():
+    wn.bgpic("/Volumes/Classes/High/ITAMS/TCalabresi/Period2/Group/gavin, hamza, rayyan/project_1_1/jack_cv_entr.gif")
+
+def choice():
+    wn.bgpic("/Volumes/Classes/High/ITAMS/TCalabresi/Period2/Group/gavin, hamza, rayyan/project_1_1/choose.gif") 
 
 # 0 — Beginning
 print("Welcome to this adventure game!\nYou will be a cactus man looking for a jewel.\nThis is a choice game, so if you pick the wrong choice, YOU DIE!")
-# 1 - Ghost 
+# 1 - Ghost
+chc_0()
 choice_1 = input("You have encountered a ghost, oh dear god. You have 2 options.\nType 't' to talk to the ghost, or type 'f' to fight the ghost: ")
 if choice_1 == 't':
-   print("You have talked to the ghost.\nThe ghost tells you that you need to go get a special jewel and eat it before sundown to turn back into a non-cactus.")
    chc_1()
+   print("You have talked to the ghost.\nThe ghost tells you that you need to go get a special jewel and eat it before sundown to turn back into a non-cactus.")
 # 2 - Turtle
    choice_2 = input("You have started your adventure, and you are heading towards a cave. To get there, you have to go through the treacherous desert. However, you've encountered a turtle.\nType 'e' to eat the turtle, or type 'b' to befriend the turtle: ")
    time.sleep(1)
@@ -39,7 +82,7 @@ if choice_1 == 't':
             print("You bury the turtle and move on to the cave. It's entrance is super dark and scary (oh noes)")
       # 4a — Jewel found
          # 5 - Ending
-            choice_5 = input("After avoiding some evil looking spiders, you find two jewels: one is red and the other is blue (TOTALLY NOT A MATRIX REFERENCE) \n\n   1. Choose 'b' for the blue jewel \n 2. Choose 'r' for the red jewel")
+            choice_5 = input("After avoiding some evil looking spiders, you find two jewels: one is red and the other is blue (TOTALLY NOT A MATRIX REFERENCE) \n\n   1. Choose 'b' for the blue jewel \n\n   2. Choose 'r' for the red jewel \n\n")
             spdr()
             time.sleep(1)
             cave()
@@ -112,8 +155,8 @@ if choice_1 == 't':
             time.sleep(1)
             choice()
             if choice_5 == "r":
-               print("You eat the red jewel, nothing happens, you cry. Then everything just becomes still\n the ghost stands in front of you, his eyes RED")
-               print("Cactus don't exist anymore, but they do. I AM CACTUS. YOU ARE CACTUS. CACTUS. CACTUSSS. CaCTus!!!!")
+               print("You eat the red jewel, nothing happens, you cry. Then everything just becomes still\nthe ghost stands in front of you, his eyes RED")
+               print("Cactus don't exist anymore, but they do. I AM CACTUS. YOU ARE CACTUS. CACTUS. CACTUSSS. CaCTus!!!!\n ERROR 504 - 348RT3984957")
             elif choice_5 == "b":
                print("You are dead. The blue jewel was actually a moldy spooder. Spooder will consume you. >:)")
 elif choice_1 == 'f':
